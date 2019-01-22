@@ -11,10 +11,11 @@ function showRepositories(event, data) {
   const template = Handlebars.compile(src);
   const repoList = template(repos);
   document.getElementById('repositories').innerHTML = repoList;
-  document.addEventListener('DOMContentLoaded', function(event) {
-  Handlebars.registerPartial(
-    'authorPartial',
-    document.getElementById('author-partial-template').innerHTML
-  );
-});
 }
+
+document.addEventListener('DOMContentLoaded', function(event) {
+Handlebars.registerPartial(
+  'authorPartial',
+  document.getElementById('author-partial-template').innerHTML
+);
+});
